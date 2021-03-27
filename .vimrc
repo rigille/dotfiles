@@ -6,13 +6,15 @@ set foldmethod=syntax nofoldenable
 set incsearch
 set nohlsearch
 
-set tabstop=3
-set softtabstop=0 noexpandtab
-set shiftwidth=3
+set tabstop=2
+set expandtab
+set shiftwidth=2
 
 au FileType * set fo-=c fo-=r fo-=o
 
 filetype plugin on
 syntax on
+
+:nnoremap <expr> <leader>r ':!clear<cr>:w!<cr>:!time kind %<cr>'
 
 set ttimeoutlen=10
